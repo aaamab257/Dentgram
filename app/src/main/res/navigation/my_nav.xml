@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.atcode.dentgram.ui.splash.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_splashScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.atcode.dentgram.ui.welcome.WelcomeScreen"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.atcode.dentgram.ui.login.LoginScreen"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action android:id="@+id/action_loginScreen_self" />
+        <action
+            android:id="@+id/action_loginScreen_to_splashScreen"
+            app:destination="@id/splashScreen"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_loginScreen_to_registerScreen"
+            app:destination="@id/registerScreen"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_loginScreen_to_forgetPasswordScreen"
+            app:destination="@id/forgetPasswordScreen"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_loginScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpToInclusive="true"
+
+            app:popUpTo="@id/loginScreen"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/registerScreen"
+        android:name="com.atcode.dentgram.ui.register.RegisterScreen"
+        android:label="fragment_register_screen"
+        tools:layout="@layout/fragment_register_screen" >
+        <action
+            android:id="@+id/action_registerScreen_to_verificationCode"
+            app:destination="@id/verificationCode"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_registerScreen_to_loginScreen"
+            app:destination="@id/loginScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPasswordScreen"
+        android:name="com.atcode.dentgram.ui.forgetPassword.ForgetPasswordScreen"
+        android:label="fragment_forget_password_screen"
+        tools:layout="@layout/fragment_forget_password_screen" >
+        <action
+            android:id="@+id/action_forgetPasswordScreen_to_createNewPassword"
+            app:destination="@id/createNewPassword"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/forgetPasswordScreen"
+            app:popUpToInclusive="true"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewPassword"
+        android:name="com.atcode.dentgram.ui.createNewPassword.CreateNewPassword"
+        android:label="fragment_create_new_password"
+        tools:layout="@layout/fragment_create_new_password" >
+        <action
+            android:id="@+id/action_createNewPassword_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:popUpTo="@id/createNewPassword"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationCode"
+        android:name="com.atcode.dentgram.ui.verificationCode.VerificationCode"
+        android:label="fragment_verification_code"
+        tools:layout="@layout/fragment_verification_code" />
+    <fragment
+        android:id="@+id/aboutScreen"
+        android:name="com.atcode.dentgram.ui.about.AboutScreen"
+        android:label="fragment_about_screen"
+        tools:layout="@layout/fragment_about_screen" >
+        <action
+            android:id="@+id/action_aboutScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.atcode.dentgram.ui.home.MainScreen"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreen_to_aboutScreen"
+            app:destination="@id/aboutScreen"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_mainScreen_to_favouritesScreen"
+            app:destination="@id/favouritesScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_contactUsScreen"
+            app:destination="@id/contactUsScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_newFeeds"
+            app:destination="@id/newFeeds" />
+        <action
+            android:id="@+id/action_mainScreen_to_matchmaking"
+            app:destination="@id/matchmaking" />
+        <action
+            android:id="@+id/action_mainScreen_to_eventsScreen"
+            app:destination="@id/eventsScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_searchScreen"
+            app:destination="@id/searchScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_educationScreen"
+            app:destination="@id/educationScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_loginScreen"
+            app:destination="@id/loginScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_eventsScreen2"
+            app:destination="@id/eventsScreen2" />
+        <action
+            android:id="@+id/action_mainScreen_to_videosAndArticls"
+            app:destination="@id/videosAndArticls" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouritesScreen"
+        android:name="com.atcode.dentgram.ui.favScreen.FavouritesScreen"
+        android:label="fragment_favourites_screen"
+        tools:layout="@layout/fragment_favourites_screen" >
+        <action
+            android:id="@+id/action_favouritesScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactUsScreen"
+        android:name="com.atcode.dentgram.ui.contactUs.ContactUsScreen"
+        android:label="fragment_contact_us_screen"
+        tools:layout="@layout/fragment_contact_us_screen" >
+        <action
+            android:id="@+id/action_contactUsScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/newFeeds"
+        android:name="com.atcode.dentgram.ui.newsFeeds.NewFeeds"
+        android:label="fragment_new_feeds"
+        tools:layout="@layout/fragment_new_feeds" >
+        <action
+            android:id="@+id/action_newFeeds_to_mainScreen"
+            app:destination="@id/mainScreen" />
+        <action
+            android:id="@+id/action_newFeeds_to_feedsDetailsScreen"
+            app:destination="@id/feedsDetailsScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchmaking"
+        android:name="com.atcode.dentgram.ui.matchmakingPage.Matchmaking"
+        android:label="fragment_matchmaking"
+        tools:layout="@layout/fragment_matchmaking" >
+        <action
+            android:id="@+id/action_matchmaking_to_mainScreen"
+            app:destination="@id/mainScreen" />
+        <action
+            android:id="@+id/action_matchmaking_to_buildingDreamScreen"
+            app:destination="@id/buildingDreamScreen" />
+        <action
+            android:id="@+id/action_matchmaking_to_findMyCandidate"
+            app:destination="@id/findMyCandidate" />
+        <action
+            android:id="@+id/action_matchmaking_to_b2BMatchmaking"
+            app:destination="@id/b2BMatchmaking" />
+    </fragment>
+    <fragment
+        android:id="@+id/buildingDreamScreen"
+        android:name="com.atcode.dentgram.ui.buildingDream.BuildingDreamScreen"
+        android:label="fragment_building_dream_screen"
+        tools:layout="@layout/fragment_building_dream_screen" >
+        <action
+            android:id="@+id/action_buildingDreamScreen_to_jobDescriptionScreen"
+            app:destination="@id/jobDescriptionScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedsDetailsScreen"
+        android:name="com.atcode.dentgram.ui.newFeedsDetails.FeedsDetailsScreen"
+        android:label="fragment_feeds_details_screen"
+        tools:layout="@layout/fragment_feeds_details_screen" />
+    <fragment
+        android:id="@+id/eventsScreen"
+        android:name="com.atcode.dentgram.ui.buyandSell.BuyAndSell"
+        android:label="fragment_events_screen"
+        tools:layout="@layout/fragment_buyandsell_screen" >
+        <action
+            android:id="@+id/action_eventsScreen_to_manageMyAds"
+            app:destination="@id/manageMyAds" />
+        <action
+            android:id="@+id/action_eventsScreen_to_filterScreen"
+            app:destination="@id/filterScreen" />
+        <action
+            android:id="@+id/action_eventsScreen_to_searchScreen"
+            app:destination="@id/searchScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageMyAds"
+        android:name="com.atcode.dentgram.ui.manageMyAd.ManageMyAds"
+        android:label="fragment_manage_my_ads"
+        tools:layout="@layout/fragment_manage_my_ads" >
+        <action
+            android:id="@+id/action_manageMyAds_to_addAdProduct"
+            app:destination="@id/addAdProduct" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAdProduct"
+        android:name="com.atcode.dentgram.ui.addAdProd.AddAdProduct"
+        android:label="fragment_add_ad_product"
+        tools:layout="@layout/fragment_add_ad_product" >
+        <action
+            android:id="@+id/action_addAdProduct_to_adPreview"
+            app:destination="@id/adPreview" />
+    </fragment>
+    <fragment
+        android:id="@+id/adPreview"
+        android:name="com.atcode.dentgram.ui.adPreview.AdPreview"
+        android:label="fragment_ad_preview"
+        tools:layout="@layout/fragment_ad_preview" >
+        <action
+            android:id="@+id/action_adPreview_to_promoteYourAds"
+            app:destination="@id/promoteYourAds" />
+        <action
+            android:id="@+id/action_adPreview_to_addAdProduct"
+            app:destination="@id/addAdProduct" />
+    </fragment>
+    <fragment
+        android:id="@+id/promoteYourAds"
+        android:name="com.atcode.dentgram.ui.promoteAds.PromoteYourAds"
+        android:label="fragment_promote_your_ads"
+        tools:layout="@layout/fragment_promote_your_ads" >
+        <action
+            android:id="@+id/action_promoteYourAds_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterScreen"
+        android:name="com.atcode.dentgram.ui.filter.FilterScreen"
+        android:label="fragment_filter_screen"
+        tools:layout="@layout/fragment_filter_screen" />
+    <fragment
+        android:id="@+id/searchScreen"
+        android:name="com.atcode.dentgram.ui.searchScreen.SearchScreen"
+        android:label="fragment_search_screen"
+        tools:layout="@layout/fragment_search_screen" />
+    <fragment
+        android:id="@+id/jobDescriptionScreen"
+        android:name="com.atcode.dentgram.JobDescriptionScreen"
+        android:label="fragment_job_description_screen"
+        tools:layout="@layout/fragment_job_description_screen" />
+    <fragment
+        android:id="@+id/findMyCandidate"
+        android:name="com.atcode.dentgram.FindMyCandidate"
+        android:label="fragment_find_my_candidate"
+        tools:layout="@layout/fragment_find_my_candidate" >
+        <action
+            android:id="@+id/action_findMyCandidate_to_candidateProfile"
+            app:destination="@id/candidateProfile" />
+        <action
+            android:id="@+id/action_findMyCandidate_to_myJobs"
+            app:destination="@id/myJobs" />
+    </fragment>
+    <fragment
+        android:id="@+id/candidateProfile"
+        android:name="com.atcode.dentgram.CandidateProfile"
+        android:label="fragment_candidate_profile"
+        tools:layout="@layout/fragment_candidate_profile" />
+    <fragment
+        android:id="@+id/myJobs"
+        android:name="com.atcode.dentgram.MyJobs"
+        android:label="fragment_my_jobs"
+        tools:layout="@layout/fragment_my_jobs" >
+        <action
+            android:id="@+id/action_myJobs_to_promoteYourJob"
+            app:destination="@id/promoteYourJob" />
+        <action
+            android:id="@+id/action_myJobs_to_companyProfile"
+            app:destination="@id/companyProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/promoteYourJob"
+        android:name="com.atcode.dentgram.PromoteYourJob"
+        android:label="fragment_promote_your_job"
+        tools:layout="@layout/fragment_promote_your_job" />
+    <fragment
+        android:id="@+id/companyProfile"
+        android:name="com.atcode.dentgram.CompanyProfile"
+        android:label="fragment_company_profile"
+        tools:layout="@layout/fragment_company_profile" />
+    <fragment
+        android:id="@+id/postJob"
+        android:name="com.atcode.dentgram.PostJob"
+        android:label="fragment_post_job"
+        tools:layout="@layout/fragment_post_job" />
+    <fragment
+        android:id="@+id/b2BMatchmaking"
+        android:name="com.atcode.dentgram.B2BMatchmaking"
+        android:label="fragment_b2_b_matchmaking"
+        tools:layout="@layout/fragment_b2_b_matchmaking" />
+    <fragment
+        android:id="@+id/eventsScreen2"
+        android:name="com.atcode.dentgram.ui.events.EventsScreen"
+        android:label="fragment_events_screen"
+        tools:layout="@layout/fragment_events_screen" >
+        <action
+            android:id="@+id/action_eventsScreen2_to_eventsDescription"
+            app:destination="@id/eventsDescription" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventsDescription"
+        android:name="com.atcode.dentgram.ui.eventDes.EventsDescription"
+        android:label="fragment_events_description"
+        tools:layout="@layout/fragment_events_description" />
+    <fragment
+        android:id="@+id/educationScreen"
+        android:name="com.atcode.dentgram.EducationScreen"
+        android:label="fragment_education_screen"
+        tools:layout="@layout/fragment_education_screen" />
+    <fragment
+        android:id="@+id/loadingScreen"
+        android:name="com.atcode.dentgram.LoadingScreen"
+        android:label="fragment_loading_screen"
+        tools:layout="@layout/fragment_loading_screen" />
+    <fragment
+        android:id="@+id/videosAndArticls"
+        android:name="com.atcode.dentgram.ui.videosandarticls.VideosAndArticls"
+        android:label="fragment_videos_and_articls"
+        tools:layout="@layout/fragment_videos_and_articls" >
+        <action
+            android:id="@+id/action_videosAndArticls_to_videoPlayer"
+            app:destination="@id/videoPlayer" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoPlayer"
+        android:name="com.atcode.dentgram.VideoPlayer"
+        android:label="fragment_video_player"
+        tools:layout="@layout/fragment_video_player" />
+</navigation>

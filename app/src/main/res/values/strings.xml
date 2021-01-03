@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Dentgram</string>
+
+    <string name="welcomeTxt">Welcome To Dentgram</string>
+    <string name="loginTxt">Login To Dentgram</string>
+    <string name="signin">Sign in</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forgot your password?</string>
+    <string name="signup_txt">I don"'"t have an account !</string>
+    <string name="signup">Sign up</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ahmed_badr">Ahmed Badr</string>
+    <string name="view_profile">View Profile</string>
+    <string name="matchmaking">Matchmaking</string>
+    <string name="community_market">Community Market</string>
+    <string name="new_feeds">News Feed</string>
+    <string name="favourite">Favourites</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="articles_videos">Articles,Videos</string>
+    <string name="education">Education</string>
+    <string name="_365_showroom">360 Showroom</string>
+    <string name="events">Events</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="location">Location</string>
+    <string name="title">Title</string>
+    <string name="speciality">Speciality</string>
+    <string name="phone_number">Phone number</string>
+    <string name="button">Button</string>
+    <string name="i_have_an_account">I have an account!</string>
+    <string name="forget_password_screen">Forget password</string>
+    <string name="txt_password">Please enter your email then we will help you  create a new password</string>
+    <string name="next">Next</string>
+    <string name="create_new_password">Create new password</string>
+    <string name="please_enter_your_new_password_and_confirm">Please enter your new password and confirm</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="verification">Verification</string>
+    <string name="type_the_4_digit_code_that_s_been_sent_to_your_phone">Type the 4 digit code that’s been sent to your phone</string>
+    <string name="skip">Skip</string>
+    <string name="get_started">Get Started</string>
+    <string name="value_empower1"><![CDATA[value & empower]]></string>
+    <string name="value_empower2"><![CDATA[value & empower]]></string>
+    <string name="value_empower3"><![CDATA[value & empower]]></string>
+    <string name="resend_code">Resend code</string>
+    <string name="verify_code">Verify code</string>
+    <string name="about_dentgram">About Dentgram</string>
+    <string name="powerd_by">Powerd by</string>
+    <string name="custom_dialog">Please Wait</string>
+    <string name="version_1">Version 1</string>
+    <string name="dentgram_about_txt">Dentgram is one of the most innovative manufacturers in the world. As a leading supplier in the dental industry, our product portfolio covers a wide spectrum of dentistry Onnovative manufacturers in the world. As a leading supplier in the dental industry, our product portfolio covers a wide spectrum of dentistry Onnovative manufacturers in the world. As a leading supplier in product portfolio covers a wide spectrum of dentistry</string>
+    <string name="terms_and_conditions">Terms and conditions</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="dentgram_dentgram_com">Dentgram@Dentgram.com</string>
+    <string name="contact">Contact</string>
+    <string name="follow_dentagram_now">Follow Dentagram Now</string>
+    <string name="welcome">Welcome,</string>
+    <string name="favourites">Favourites</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="message">Message</string>
+    <string name="name">Name</string>
+    <string name="no">No</string>
+    <string name="ok">Ok</string>
+    <string name="logout">Logout</string>
+    <string name="news_feeds">News Feed</string>
+    <string name="explore_library">Explore Library</string>
+    <string name="building_dream_job">Building dream job</string>
+    <string name="master_the_basics_of_digital_marketing_with_our_free">Master the basics of digital marketing with our free .</string>
+    <string name="find_my_candidate">Find my Candidate</string>
+    <string name="buy_sell"><![CDATA[Buy & Sell]]></string>
+    <string name="my_ads">My Ads</string>
+    <string name="featured_products">Featured Products</string>
+    <string name="add_ad_product">Add Ad Product</string>
+    <string name="status">Status</string>
+    <string name="product_details">Product details</string>
+    <string name="price">Price</string>
+    <string name="brand">Brand</string>
+    <string name="used">Used</string>
+    <string name="filter">Filter</string>
+    <string name="job_description">Job description</string>
+    <string name="responsibilities">Responsibilities</string>
+    <string name="qualifications">Qualifications</string>
+    <string name="benefits">Benefits</string>
+
+
+    <string-array name="eventsSortedBy">
+        <item>Date: Latest</item>
+        <item>Date: Earliest</item>
+        <item>Alphabetic: A-Z</item>
+        <item>Alphabetic: Z-A</item>
+    </string-array>
+</resources>

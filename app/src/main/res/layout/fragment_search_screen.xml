@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="handler"
+            type="com.atcode.dentgram.ui.searchScreen.SearchScreen.SearchHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        tools:context=".ui.searchScreen.SearchScreen">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin15dp"
+            android:layout_marginStart="@dimen/margin10dp"
+            android:layout_marginEnd="@dimen/margin10dp"
+            >
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="@dimen/margin10dp"
+                android:ems="10"
+                android:background="@drawable/search_ed_style"
+                android:layout_weight="0.5"
+                android:inputType="textPersonName"
+                android:hint="Search here ..."
+                android:padding="@dimen/margin8dp"
+                android:drawablePadding="@dimen/margin8dp"
+                android:drawableStart="@drawable/search_page_icon"
+                app:layout_constraintEnd_toStartOf="@+id/textView59"
+                />
+
+            <TextView
+                android:layout_weight="2.5"
+                android:id="@+id/textView59"
+                android:layout_width="match_parent"
+                android:onClick="@{handler::onCancel}"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textAlignment="center"
+                android:textColor="#FFBF41"
+                />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="com.atcode.dentgram.ui.filter.FilterScreen.FilterHandler" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="@color/colorWhite"
+            tools:context=".ui.filter.FilterScreen">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/ed_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toolbar_bg"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:contentDescription="TODO"
+                android:onClick="@{handler::back}"
+                android:src="@drawable/back_icon_arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/ed_toolbar"
+                app:layout_constraintStart_toStartOf="@+id/ed_toolbar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.666" />
+
+            <TextView
+                android:id="@+id/txt_titleProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="@+id/ed_toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.439"
+                app:layout_constraintStart_toEndOf="@+id/img_back"
+                app:layout_constraintTop_toTopOf="@+id/ed_toolbar"
+                app:layout_constraintVertical_bias="0.826" />
+
+            <TextView
+                android:id="@+id/txt_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:text="Reset"
+                android:textColor="#FFBF41"
+                app:layout_constraintBottom_toBottomOf="@+id/ed_toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.898"
+                app:layout_constraintStart_toEndOf="@+id/txt_titleProduct"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.076" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/toolbar">
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="Date"
+                android:textColor="#03034D"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
+                <TextView
+                    android:id="@+id/textView61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Starts From"
+                    android:layout_alignParentStart="true"
+                    android:textColor="#7C79A6"
+                    />
+                <TextView
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/txt_dateFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:text="Sun .18 Oct 2020"
+                    android:textColor="#FFBF41"
+                    />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1.5px"
+                android:background="#DFCDCD"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin8dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
+                <TextView
+                    android:id="@+id/textView71"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ends By"
+                    android:layout_alignParentStart="true"
+                    android:textColor="#7C79A6"
+                    />
+                <TextView
+                    android:id="@+id/txt_dateTo"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thu .24 Oct 2020"
+                    android:textColor="#7C79A6"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/txt_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/margin15dp"
+                android:layout_marginEnd="20dp"
+                android:text="Categories"
+                android:textColor="#03034D"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/txt_marketing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Marketing"
+                    android:layout_alignParentStart="true"
+                    android:textColor="#7C79A6"
+                    />
+                <CheckBox
+                    android:id="@+id/ch_marketing"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="#7C79A6"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/txt_healthCare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Health care"
+                    android:layout_alignParentStart="true"
+                    android:textColor="#7C79A6"
+                    />
+                <CheckBox
+                    android:id="@+id/ch_healthCare"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="#7C79A6"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/txt_dentalCare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dental Care"
+                    android:layout_alignParentStart="true"
+                    android:textColor="#7C79A6"
+                    />
+                <CheckBox
+                    android:id="@+id/ch_dentalCare"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="#7C79A6"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/txt_digitalMarketing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Digital Marketing"
+                    android:layout_alignParentStart="true"
+                    android:textColor="#7C79A6"
+                    />
+                <CheckBox
+                    android:id="@+id/ch_digitalMarketing"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="#7C79A6"
+                    />
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>
